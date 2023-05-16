@@ -1,0 +1,189 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+body {
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  font-family: "fontello";
+  background: linear-gradient(
+      to bottom,
+      rgba(245, 95, 215, 0.5),
+      rgba(66, 23, 183, 0.8)
+    ),
+    /* url로 이미지 불러오려면 ../하기 */
+      url("../images/KakaoTalk_20230516_093807420_01.jpg") left bottom no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wrap {
+  position: relative;
+  height: 1220px;
+  width: auto;
+}
+
+/* 상단 부분 */
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  line-height: 100px;
+}
+header > a {
+  color: rgb(31, 29, 29);
+  font-size: 50px;
+  font-weight: 800;
+  margin-left: 40px;
+  float: left;
+}
+
+/* 폰텔로 */
+.icon {
+  float: left;
+}
+.icon-moon {
+  /* content로 가상공간 만들어주기 */
+  content: "";
+  color: blueviolet;
+  /* 아이콘은 폰트임 */
+  font-size: 30px;
+}
+.icon-cloud {
+  content: "";
+  color: blueviolet;
+  font-size: 30px;
+}
+.icon-flash {
+  content: "";
+  color: blueviolet;
+  font-size: 30px;
+}
+.icon-home {
+  content: "";
+  color: rgb(82, 6, 6);
+  font-size: 30px;
+}
+/* 안됨;; */
+
+/* 메인 부분 */
+section {
+  width: 73%;
+  margin: 100px auto;
+  background-color: brown;
+}
+.bg {
+  width: 200px;
+  height: 300px;
+  float: left;
+  background-color: aqua;
+  position: relative;
+  box-shadow: 100px 100px 80px 0 rgba(0, 0, 0, 0.5);
+}
+.bg img {
+  width: 200px;
+  height: 300px;
+}
+.bg span {
+  width: 200px;
+  height: 300px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+  opacity: 0;
+  transition: all ease-in-out 0.4s;
+}
+/* 호버했을떄 */
+.bg:hover span {
+  opacity: 1;
+}
+
+.info {
+  width: 70%;
+  height: 890px;
+  float: right;
+  position: relative;
+  /* background-color: rgb(78, 143, 201); */
+}
+.info h1 {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-weight: 800;
+  font-size: 35px;
+}
+.text {
+  position: absolute;
+  bottom: 0px;
+  font-size: 35px;
+  color: #fff;
+}
+.info .text h2 {
+  margin-left: 350px;
+  margin-top: 50px;
+  /* 커서 가져다대면 손가락 모양 나옴 */
+  cursor: pointer;
+}
+.info .text p {
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 30px;
+}
+.bg2 {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  bottom: 270px;
+  left: 300px;
+  box-shadow: 100px 100px 80px 0 rgba(0, 0, 0, 0.5);
+}
+.bg2 img {
+  width: 400px;
+  height: 200px;
+}
+.bg2 span {
+  width: 400px;
+  height: 200px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../images/KakaoTalk_20230516_093807420_02.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  /* 모든걸 다 합쳐서 */
+  transition: all ease-in-out 0.7s;
+}
+
+/* 호버했을떄 */
+.bg2:hover span {
+  opacity: 1;
+}
+
+/* 하단 부분 */
+footer {
+  height: 100px;
+  width: 100%;
+  background-color: rgb(251, 230, 255);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+footer p {
+  font-size: 50px;
+  color: #2e1010;
+}
